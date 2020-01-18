@@ -32,17 +32,44 @@
                 </div>
 
                 <div class="row">
-                    <input type="range" min="8" max="128" name="slider" id="slider">
+                    <form>
+                        <div class="form-group">
+                            <label for="customRange1" id="length" class="font-weight-bold"
+                                style="padding:10px;"></label>
+                            <input type="range" class="custom-range" id="customRange1" min="8" max="128" name="slider">
+                        </div>
+                    </form>
                 </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Upper Case Letters
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                      Numbers
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                      Symbols
+                    </label>
+                  </div>
 
                 <div class="row">
-                    <button onclick="generatePass()" id="generate">Generate Password</button>
-
-                    <button onclick="copyPasta()" id="copy">Copy to Clipboard</button>
-                    <div id="length"></div>
+                    <button type="button" onclick="generatePass()" class="btn btn-primary btn-lg" id="generate"
+                        style="margin:5px;">Generate Password</button>
+                    <button type="button" onclick="copyPasta()" class="btn btn-primary btn-lg" id="copy"
+                        style="margin:5px;">Copy to Clipboard</button>
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -58,7 +85,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src ="./script.js">
+    <script src="./script.js">
     </script>
 </body>
 

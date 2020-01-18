@@ -1,8 +1,8 @@
 //funciton to generate random password
 function generatePass(){
 
-    //setting password length according to slider
-    let passLength = document.getElementById("slider").value;
+    //setting password length according to customRange1
+    let passLength = document.getElementById("customRange1").value;
     //password values
     let passVals = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*()_+";
 
@@ -19,10 +19,10 @@ function generatePass(){
 //display length display
 document.getElementById("length").innerHTML = "Length:64";
 
-//function to set length text based on the slider value
-document.getElementById("slider").oninput = function() {
-    if(document.getElementById("slider").value > 0) {
-        document.getElementById("length").innerHTML = "Length: " + document.getElementById("slider").value;
+//function to set length text based on the customRange1 value
+document.getElementById("customRange1").oninput = function() {
+    if(document.getElementById("customRange1").value > 0) {
+        document.getElementById("length").innerHTML = "Length: " + document.getElementById("customRange1").value;
 
     } else{
         document.getElementById("length").innerHTML = "Length: 8";
