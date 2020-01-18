@@ -32,31 +32,31 @@
                 </div>
 
                 <div class="row">
-                    <form>
-                        <div class="form-group">
-                            <label for="customRange1" id="length" class="font-weight-bold"
-                                style="padding:10px;"></label>
-                            <input type="range" class="custom-range" id="customRange1" min="8" max="128" name="slider">
-                        </div>
-                    </form>
+                    <div class="content" style="padding:0;">
+                        <form>
+                            <div class="form-group">
+                                <label for="customRange1" id="length" class="font-weight-bold"
+                                    style="padding:10px;"></label>
+                                <input type="range" class="custom-range" id="customRange1" min="8" max="128"
+                                    name="slider">
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                      Upper Case Letters
+                <div class="form-check-inline">
+                    <label class="form-check-label" style="margin-bottom: 5px;">
+                      <input type="checkbox" class="form-check-input" id="optionUp" value="ABCDEFGHIJKLMNOPQRSTUV">Upper Case Letters
                     </label>
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                    <label class="form-check-label" for="defaultCheck2">
-                      Numbers
+                  <div class="form-check-inline">
+                    <label class="form-check-label" style="margin-bottom: 5px;">
+                      <input type="checkbox" class="form-check-input" id="optionNum"value="1234567890">Numbers
                     </label>
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled>
-                    <label class="form-check-label" for="defaultCheck2">
-                      Symbols
+                  <div class="form-check-inline">
+                    <label class="form-check-label" style="margin-bottom: 5px;">
+                      <input type="checkbox" class="form-check-input" id="optionSymb" value="!@#$%^&*()_+">Symbols
                     </label>
                   </div>
 
@@ -66,9 +66,12 @@
                     <button type="button" onclick="copyPasta()" class="btn btn-primary btn-lg" id="copy"
                         style="margin:5px;">Copy to Clipboard</button>
                 </div>
+                
 
             </div>
+
         </div>
+    </div>
     </div>
     </div>
 
