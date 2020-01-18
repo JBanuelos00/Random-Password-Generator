@@ -29,18 +29,17 @@
                 <div class="row">
                     <textarea readonly id="password" placeholder="Your Secure Password"
                         aria-label="Generated Password"></textarea>
-
-                    <div id="length"></div>
                 </div>
 
                 <div class="row">
-                    <input type="range" min="0" max="28" name="slider" id="slider">
+                    <input type="range" min="8" max="128" name="slider" id="slider">
                 </div>
 
                 <div class="row">
                     <button onclick="generatePass()" id="generate">Generate Password</button>
 
-                    <button onclick="" id="copy">Copy to Clipboard</button>
+                    <button onclick="copyPasta()" id="copy">Copy to Clipboard</button>
+                    <div id="length"></div>
                 </div>
             </div>
         </div>
