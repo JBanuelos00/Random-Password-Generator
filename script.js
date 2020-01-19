@@ -4,41 +4,47 @@
 let passLength = document.getElementById("customRange1");
 let lengthDisp = document.getElementById("length");
 
-//check what options are checked
+//getting all necessary check boxes here
+let lowCase = document.getElementById("optionLow");
 let upCase = document.getElementById("optionUp");
 let Nums = document.getElementById("optionNum");
 let Symb = document.getElementById("optionSymb");
 
 let passText = document.getElementById("password");
-let setVars = document.getElementById("setVars");
-let passVals = "";
+let genPass = document.getElementById("generate");
+let copyPasta = document.getElementById("copy");
 
-//making sure boxes are checked and inputing the correct values
 
-setVars.addEventListener("click", function () {
+//add event listener to generate password button
+
+genPass.addEventListener("click", function () {
+
     let options = document.forms[1];
+    let passVals = "";
     for (let i = 0; i < options.length; i++) {
         if (options[i].checked) {
             passVals = passVals + options[i].value;
         }
     }
-});
+    // console.log(passVals);
+    //check if any options have been enabled
+    if (passVals === "") {
 
-//function to generate random password
-function generatePass() {
+        alert("You need to select at least one set of characters to include in your random password.");
 
-    // ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*()_+    
+    } else {
 
-    let pass = "";
-    //for loop that chooses password characters
-    for (i = 0; i <= passLength; i++) {
-        pass = pass + passVals.charAt(Math.floor(Math.random() * Math.floor(passVals.length - 1)));
+        let pass = "";
+        //for loop that chooses password characters
+        for (i = 0; i <= passLength.value; i++) {
+            pass = pass + passVals.charAt(Math.floor(Math.random() * Math.floor(passVals.length - 1)));
 
-        //write the password result to the textbox
-        passText.value = pass;
+            //write the password result to the textbox
+            passText.value = pass;
+        }
     }
 
-}
+});
 
 //display length display
 lengthDisp.innerHTML = "Length:64";
@@ -54,11 +60,11 @@ passLength.oninput = function () {
 }
 
 //copying password to clipboard
-function copyPasta() {
+copyPasta.addEventListener("click", function () {
     passText.select();
 
     document.execCommand("copy");
 
     alert("Password has been copied to your clipboard.");
 
-}
+});
