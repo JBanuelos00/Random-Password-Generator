@@ -14,6 +14,9 @@ let passText = document.getElementById("password");
 let genPass = document.getElementById("generate");
 let copyPasta = document.getElementById("copy");
 
+let passImg = document.getElementById("passImg");
+let passSauce = document.getElementById("sauce");
+
 
 //add event listener to generate password button
 
@@ -43,7 +46,6 @@ genPass.addEventListener("click", function () {
             passText.value = pass;
         }
     }
-
 });
 
 //display length display

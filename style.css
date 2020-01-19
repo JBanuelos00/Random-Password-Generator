@@ -1,9 +1,18 @@
+body {
+    background-image: url(Assets/background.png);
+    background-repeat: repeat;
+}
+
 .content {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: teal;
     padding: 20px;
     width: 100%;
+}
+
+h1 {
+    padding: 10px;
+    margin: 0;
 }
 
 #password {
