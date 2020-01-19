@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Password Generator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,9 +20,9 @@
             <h1>Password Generator</h1>
         </header>
 
-        <div class="col-sm-12 mx-auto">
+        <div class="col-sm-12 mx-auto"> 
             <div class="content">
-                <div class="row">
+                <div class="row"> 
                     <h2>Generate a Password</h2>
                 </div>
 
@@ -43,30 +43,33 @@
                         </form>
                     </div>
                 </div>
+                <form>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" style="margin-bottom: 5px;">
+                            <input type="checkbox" class="form-check-input" id="optionUp"
+                                value="ABCDEFGHIJKLMNOPQRSTUV">Upper Case Letters
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" style="margin-bottom: 5px;">
+                            <input type="checkbox" class="form-check-input" id="optionNum" value="1234567890">Numbers
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" style="margin-bottom: 5px;">
+                            <input type="checkbox" class="form-check-input" id="optionSymb" value="!@#$%^&*()_+">Symbols
+                        </label>
+                    </div>
+                    <input type="button" class = "btn btn-danger" id="setVars" value="Set Variables">
+                </form>
 
-                <div class="form-check-inline">
-                    <label class="form-check-label" style="margin-bottom: 5px;">
-                      <input type="checkbox" class="form-check-input" id="optionUp" value="ABCDEFGHIJKLMNOPQRSTUV">Upper Case Letters
-                    </label>
-                  </div>
-                  <div class="form-check-inline">
-                    <label class="form-check-label" style="margin-bottom: 5px;">
-                      <input type="checkbox" class="form-check-input" id="optionNum"value="1234567890">Numbers
-                    </label>
-                  </div>
-                  <div class="form-check-inline">
-                    <label class="form-check-label" style="margin-bottom: 5px;">
-                      <input type="checkbox" class="form-check-input" id="optionSymb" value="!@#$%^&*()_+">Symbols
-                    </label>
-                  </div>
-
-                <div class="row">
-                    <button type="button" onclick="generatePass()" class="btn btn-primary btn-lg" id="generate"
-                        style="margin:5px;">Generate Password</button>
-                    <button type="button" onclick="copyPasta()" class="btn btn-primary btn-lg" id="copy"
-                        style="margin:5px;">Copy to Clipboard</button>
-                </div>
-                
+                    <!-- <div class="row">
+                        <button type="button" onclick="generatePass()" class="btn btn-primary btn-lg" id="generate"
+                            style="margin:5px;">Generate Password</button>
+                        <button type="button" onclick="copyPasta()" class="btn btn-primary btn-lg" id="copy"
+                            style="margin:5px;">Copy to Clipboard</button>
+                    </div>
+                 -->
 
             </div>
 
